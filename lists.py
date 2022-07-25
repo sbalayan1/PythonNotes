@@ -26,3 +26,19 @@ def more_guests(people, additions):
     guest_list(people)
 
 more_guests(famous_people, more_people)
+
+def shrinking_guest_list(people):
+    i,j=0,0
+    while i<2:
+        guest = people.pop()
+        print(f"Sorry {guest}. I can't invite you to dinner. {people[i].title()}, you are still invited")
+        i+=1
+
+    while j<len(people):
+        del people[j]
+
+    print(people)
+
+
+
+shrinking_guest_list(famous_people)
