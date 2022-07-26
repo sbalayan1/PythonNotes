@@ -28,7 +28,34 @@ def square_range(start, end):
     
     print(list)
 
+# the below does square_range but in less lines of code
+def list_comprehension(start, end):
+    numbers = [value**2 for value in range(start,end)]
+    print(numbers)
+
+square_range(0,11)
+list_comprehension(0,11)
+
+
 def methods_for_lists_of_numbers(list):
     print(max(list), min(list), sum(list))
 
 methods_for_lists_of_numbers([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
+def count_to_twenty():
+    for i in range(1,21):
+        print(i)
+
+def one_million(start, end):
+    number = [i for i in range(start, end)]
+    print(f"One million: {number}")
+
+one_million(1, 1000000)
+
+def odd_numbers(start, end):
+    number = [i for i in range(start, end, 2)]
+    print(number)
+
+odd_numbers(1, 20)
+
